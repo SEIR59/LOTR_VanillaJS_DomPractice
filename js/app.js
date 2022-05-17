@@ -162,6 +162,10 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	const Going = document.getElementById("Rivendell");
+	const The_Hobbits = document.querySelector("#The-Shire ul");
+	Going.append(The_Hobbits);
+
 }
 
 // COMMIT YOUR WORK
