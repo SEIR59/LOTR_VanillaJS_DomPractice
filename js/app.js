@@ -53,14 +53,28 @@ function makeMiddleEarth() {
 function makeHobbits() {
 	console.log('2: makeHobbits')
 
+	const uList = document.createElement("ul");
 	// display an `unordered list` of hobbits in the shire
+	for(i = 0; i < hobbits.length; i++) {
+	const items = document.createElement("li");
+	console.log("this good?")
 
-	// give each hobbit a class of `hobbit`
+ 	// give each hobbit a class of `hobbit`
+	 uList.setAttribute('class', 'hobbit')
+	 items.innerText = `${hobbits[i]}`
+		console.log(uList)
 
-	// hint: create a 'ul' outside the loop into which to append the 'li's
 
+		uList.appendChild(items);
+	}
+		const shire = document.getElementById("The-Shire")
+		shire.appendChild(uList);
+	// // hint: create a 'ul' outside the loop into which to append the 'li's
+
+	}
 	// hint: get 'The-Shire' by using its id
-}
+	
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -271,3 +285,4 @@ document.getElementById('all-chapters').addEventListener('click', () => {
 	weWantsIt()
 	thereAndBackAgain()
 })
+	
