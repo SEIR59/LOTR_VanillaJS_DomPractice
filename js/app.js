@@ -60,6 +60,22 @@ function makeHobbits() {
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
+
+
+	// get article with id of "The-shire"
+	let The_Shire = document.getElementById("The-Shire");
+	// create an ul element
+	let list_Hobbits = document.createElement("ul");
+	
+	// append the ul element to the article with id "The-Shire"
+	The_Shire.append(list_Hobbits);
+	// create li elements for all hobbits on hobbits array and append them to the ul.
+	for (let i = 0; i < hobbits.length; i++){
+		let hobbit_li = document.createElement("li");
+		hobbit_li.setAttribute("class", "hobbit");
+		hobbit_li.innerHTML = hobbits[i];
+		list_Hobbits.append(hobbit_li);
+	}
 }
 
 // COMMIT YOUR WORK
@@ -73,11 +89,18 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const the_ring =  document.createElement("div");
+	the_ring.setAttribute("id", "the-ring");
 	// give the div a class of `'magic-imbued-jewelry'`
+	const magic_jewel = document.createElement("div");
+	magic_jewel.setAttribute("id", "magic-imbued-jewelry");
+	document.body.append(magic_jewel);
+	// // add the ring as a child of `Frodo`
+	let frodo = document.querySelector("#The-Shire ul li:nth-child(1)");
+	frodo.append(the_ring);
+	// console.log(frodo);
 
-	// add the ring as a child of `Frodo`
-}
+}	
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
