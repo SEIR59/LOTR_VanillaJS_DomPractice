@@ -33,7 +33,8 @@ function makeMiddleEarth() {
 	//   2b. gives each land article an `id` tag of the corresponding land name
 		newArt.setAttribute("id", lands[i]);
 	//   2c. includes an h1 with the name of the land inside each land article
-		let h1 = document.createElement('h1');
+		const h1 = document.createElement('h1');
+		newArt.appendChild(h1);
 		h1.innerText = lands[i];
 	//   2d. appends each land to the middle-earth section
 		MiddleEarth.appendChild(newArt);
