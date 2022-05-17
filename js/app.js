@@ -162,10 +162,9 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
-	const Going = document.getElementById("Rivendell");
+	const rivendell = document.getElementById("Rivendell");
 	const The_Hobbits = document.querySelector("#The-Shire ul");
-	Going.append(The_Hobbits);
-
+	rivendell.append(The_Hobbits);
 }
 
 // COMMIT YOUR WORK
@@ -177,8 +176,9 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
 	// change the `'Strider'` text to `'Aragorn'`
+	let strider = document.querySelector("#Rivendell ul li:nth-child(4)");
+	strider.innerHTML = "Aragorn";
 }
 
 // COMMIT YOUR WORK
