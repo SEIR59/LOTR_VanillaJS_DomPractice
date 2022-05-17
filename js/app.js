@@ -27,7 +27,6 @@ function makeMiddleEarth() {
 	
 	// 2. use a for loop to iterate over the lands array that does the following:
 	for (let i = 0; i < lands.length; i++) {
-		console.log(lands[i]);
 		//   2a. creates an article tag (there should be one for each land when the loop is done)
 		let land = document.createElement("article");
 		//   2b. gives each land article an `id` tag of the corresponding land name
@@ -137,12 +136,20 @@ function makeBaddies() {
 function makeBuddies() {
 	console.log('5: makeBuddies')
 
+	const rivendell = document.getElementById("Rivendell");
 	// create an `aside` tag
-
+	let buddies_aside = document.createElement("aside");
 	// put an `unordered list` of the `'buddies'` in the aside
-
-	// insert your aside as a child element of `rivendell`
-}
+	let buddies_ul = document.createElement("ul");
+	buddies_aside.append(buddies_ul);
+	buddies.forEach(buddy => {
+		let buddies_li = document.createElement("li");
+		buddies_li.innerHTML = buddy;
+		buddies_ul.append(buddies_li);
+	})
+		// // insert your aside as a child element of `rivendell`
+		rivendell.appendChild(buddies_aside)
+}	
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
