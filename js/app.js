@@ -197,28 +197,41 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// // create a new div called `'the-fellowship'` within `rivendell`
-	// let Rivendell = document.getElementById("Rivendell");
-	// let the_fellowship = document.createElement("div");
-	// the_fellowship.setAttribute("id", "the-fellowship");
+	let Rivendell = document.getElementById("Rivendell");
+	let the_fellowship = document.createElement("div");
+	the_fellowship.setAttribute("id", "the-fellowship");
 
-	// Rivendell.append(the_fellowship); // √
-	
-	// let the_fellowship_ul = document.createElement("ul");
-	// the_fellowship.append(the_fellowship_ul);
+	Rivendell.append(the_fellowship); // √
 
-	// const The_Hobbits = document.querySelector("#The-Shire ul");
+	let The_Hobbits = document.getElementsByClassName("hobbit");
+	let The_Buddies = document.getElementsByClassName("buddy");
 
+	for (let i = 0; i < The_Buddies.length; i++) {
+		let isJoining = document.querySelector(`#buddies > li`);
+		the_fellowship.appendChild(isJoining);
+		alert(`${isJoining.innerText} has joined your party!`)
+	}
+	for (let i = 0; i < The_Hobbits.length; i++) {
+		let isJoining = document.querySelector(`#Hobbits > li`);
+		the_fellowship.appendChild(isJoining);
+		alert(`${isJoining.innerText} has joined your party!`)
+	}
 	// // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// // after each character is added make an alert that they // have joined your party
-	// for (let i = 0; i < hobbits.length; i++) {
-	// 	the_fellowship.appendChild(hobbits[i]);
-	// 	alert(`${hobbits[i].innerHTML} has joined the party!`)
-	// 	console.log(hobbits[i]);
+	// get elements using class, add to new un list in the-fellowship, delete old ul
+
+
+
+	// for (let i = 0; i < The_Hobbits.length; i++) {
+	// 	the_fellowship.append();
+	// 	console.log(`${i}: ${The_Hobbits[i].innerText} has joined the fellowship!.`);
+	// 	alert(`${The_Hobbits[i].innerText} has joined the party!`)
 	// }
+
+
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
 
