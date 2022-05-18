@@ -311,7 +311,20 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	let gollum = document.getElementById("gollum");
+	gollum.remove();
 	// Move all the `hobbits` back to `the shire`
+	let The_Hobbits = document.getElementsByClassName("hobbit");
+	let The_Shire = document.getElementById("The-Shire");
+
+	for (let i = 0; i < The_Hobbits.length; i++) {
+		let backHome = document.querySelector(`#Mordor > .hobbit`);
+		The_Shire.append(backHome);
+	}
+	for (let i = 0; i < The_Hobbits.length; i++) {
+		let backHome = document.querySelector(`#Rivendell > div > .hobbit`);
+		The_Shire.append(backHome);
+	}
 }
 
 // COMMIT YOUR WORK
