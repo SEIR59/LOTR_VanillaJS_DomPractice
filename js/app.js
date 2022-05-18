@@ -206,6 +206,10 @@ function forgeTheFellowShip() {
 	let The_Hobbits = document.getElementsByClassName("hobbit");
 	let The_Buddies = document.getElementsByClassName("buddy");
 
+	// // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	// // after each character is added make an alert that they // have joined your party
+	// get elements using class, add to new un list in the-fellowship, delete old ul
+	
 	for (let i = 0; i < The_Buddies.length; i++) {
 		let isJoining = document.querySelector(`#buddies > li`);
 		the_fellowship.appendChild(isJoining);
@@ -216,20 +220,6 @@ function forgeTheFellowShip() {
 		the_fellowship.appendChild(isJoining);
 		alert(`${isJoining.innerText} has joined your party!`)
 	}
-	// // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// // after each character is added make an alert that they // have joined your party
-	// get elements using class, add to new un list in the-fellowship, delete old ul
-
-
-
-	// for (let i = 0; i < The_Hobbits.length; i++) {
-	// 	the_fellowship.append();
-	// 	console.log(`${i}: ${The_Hobbits[i].innerText} has joined the fellowship!.`);
-	// 	alert(`${The_Hobbits[i].innerText} has joined the party!`)
-	// }
-
-
-
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 // COMMIT YOUR WORK
@@ -242,6 +232,9 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	let gandolf = document.querySelector("#the-fellowship li:nth-child(1)");
+	gandolf.setAttribute("class", "white");
+	gandolf.innerText = "Gandalf the White";
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
 
