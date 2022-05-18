@@ -197,8 +197,19 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
-}
+	let rivD = document.querySelector('aside')
+	let friends = rivD.firstElementChild
+	let buddies = friends.children
 
+	for(let i = 0; i < buddies.length; i++) {
+		console.log(buddies[i]);
+		if (buddies[i].innerText === 'strider'){
+
+			buddies[i].innerText = 'Aragorn'
+
+	}	
+}
+}
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
