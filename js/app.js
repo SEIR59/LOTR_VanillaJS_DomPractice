@@ -182,8 +182,11 @@ function leaveTheShire() {
 
 function beautifulStranger() {
   console.log("7: beautifulStranger");
-	let buddiesCrew = document.getElementById('buddiesCrew');
-	
+	let buddiesCrew = document.getElementById('buddiesid');
+	console.log(buddiesCrew)
+	let strider = document.getElementsByClassName('buddie')[3];
+	console.log(strider)
+	strider.innerText = 'Aragon';
   // change the `'Strider'` text to `'Aragorn'`
 }
 
