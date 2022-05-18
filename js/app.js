@@ -213,12 +213,12 @@ function forgeTheFellowShip() {
 	for (let i = 0; i < The_Buddies.length; i++) {
 		let isJoining = document.querySelector(`#buddies > li`);
 		the_fellowship.appendChild(isJoining);
-		// alert(`${isJoining.innerText} has joined your party!`)
+		alert(`${isJoining.innerText} has joined your party!`)
 	}
 	for (let i = 0; i < The_Hobbits.length; i++) {
 		let isJoining = document.querySelector(`#Hobbits > li`);
 		the_fellowship.appendChild(isJoining);
-		// alert(`${isJoining.innerText} has joined your party!`)
+		alert(`${isJoining.innerText} has joined your party!`)
 	}
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
