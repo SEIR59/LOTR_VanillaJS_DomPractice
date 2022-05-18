@@ -95,7 +95,7 @@ function keepItSecretKeepItSafe() {
 		ring.classList.add("magic-imbued-jewelry")
 
 	// add the ring as a child of `Frodo`
-		let hobbitList = document.querySelector("ul")
+		const hobbitList = document.querySelector("ul")
 		let frodo = hobbitList.children[0]
 		frodo.appendChild(ring);
 }
@@ -173,6 +173,17 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	 
+	 const shire = document.getElementById("The-Shire")
+	 console.log(shire)
+
+	//  moving hobbits
+	const riven = document.getElementById("Rivendell")
+	console.log(riven)
+
+	riven.appendChild(shire);
+	console.log(riven)
+
 }
 
 // COMMIT YOUR WORK
