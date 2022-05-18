@@ -1,4 +1,6 @@
 console.log('Linked.')
+// Without adding this variable to make body global, appendChild will not work
+const body = document.getElementsByTagName("body");
 
 // Dramatis Personae
 const hobbits = [
@@ -42,6 +44,7 @@ function makeMiddleEarth() {
 
 	// 3. append the section to the body of the DOM.
 			middleEarthEl.appendChild(landEl)
+			body[0].appendChild(middleEarthEl)
 }) }
 
 
@@ -54,15 +57,24 @@ function makeMiddleEarth() {
 // ============
 
 function makeHobbits() {
-	console.log('2: makeHobbits')
+	console.log('2: makeHobbits')	
 
 	// display an `unordered list` of hobbits in the shire
-
+	const hobbitList = document.createElement("ul");
+	hobbitList.setAttribute = "id", "hobbitsUL";
 	// give each hobbit a class of `hobbit`
+	hobbits.forEach( residents => {
+		const hobbitClass = document.createElement("li");
+		console.log(residents);
+		hobbitList.appendChild(hobbitClass)
+		hobbitClass.innerHTML = `${residents}`
+	});
 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
+	document.getElementById("The-Shire").appendChild(hobbitList);
+
 }
 
 // COMMIT YOUR WORK
@@ -73,13 +85,24 @@ function makeHobbits() {
 // ============
 
 function keepItSecretKeepItSafe() {
-	console.log('3: keepItSecretKeepItSafe')
-
+	console.log('3: keepItSecretKeepItSafe');
 	// create a div with an id of `'the-ring'`
+	let ringDiv = document.createElement("div");
+	ringDiv.setAttribute("id", "the-ring");
+	console.log(ringDiv);
 
 	// give the div a class of `'magic-imbued-jewelry'`
+	ringDiv.classList.add("magic-imbued-jewelry");
+	console.log(ringDiv);
 
 	// add the ring as a child of `Frodo`
+	let hobbitList = document.querySelector("ul");
+	console.log(hobbitList);
+	let frodo = hobbitList.children[0];
+	//.children DOM manipulator
+	frodo.appendChild(ringDiv);
+	console.log(frodo);
+
 }
 
 // COMMIT YOUR WORK
@@ -110,7 +133,7 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+	let aside = document.createElement("aside");
 	// put an `unordered list` of the `'buddies'` in the aside
 
 	// insert your aside as a child element of `rivendell`
