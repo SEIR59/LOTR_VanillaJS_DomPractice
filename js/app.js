@@ -65,7 +65,7 @@ function makeHobbits() {
 	let The_Shire = document.getElementById("The-Shire");
 	// create an ul element
 	let list_Hobbits = document.createElement("ul");
-	
+	list_Hobbits.setAttribute("id","Hobbits");
 	// append the ul element to the article with id "The-Shire"
 	The_Shire.append(list_Hobbits);
 	// create li elements for all hobbits on hobbits array and append them to the ul.
@@ -118,8 +118,10 @@ function makeBaddies() {
 	// remember to append them to Mordor
 	const mordor = document.getElementById("Mordor");
 	let list_baddies = document.createElement("ul");
+	list_baddies.setAttribute("id", "Baddies");
 	baddies.forEach(badGuy => {
 		let baddies_li = document.createElement("li");
+		baddies_li.setAttribute("class", "baddy");
 		baddies_li.innerHTML = badGuy;
 		list_baddies.append(baddies_li);
 	})
@@ -141,9 +143,12 @@ function makeBuddies() {
 	let buddies_aside = document.createElement("aside");
 	// put an `unordered list` of the `'buddies'` in the aside
 	let buddies_ul = document.createElement("ul");
+	buddies_ul.setAttribute("id", "buddies");
+	buddies_ul.setAttribute("id","buddies");
 	buddies_aside.append(buddies_ul);
 	buddies.forEach(buddy => {
 		let buddies_li = document.createElement("li");
+		buddies_li.setAttribute("class", "buddy");
 		buddies_li.innerHTML = buddy;
 		buddies_ul.append(buddies_li);
 	})
@@ -160,10 +165,11 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	
 	// assemble the `hobbits` and move them to `rivendell`
 	const rivendell = document.getElementById("Rivendell");
-	const The_Hobbits = document.querySelector("#The-Shire ul");
+	const The_Hobbits = document.getElementById("Hobbits");
+	
 	rivendell.append(The_Hobbits);
 }
 
@@ -177,7 +183,7 @@ function leaveTheShire() {
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
 	// change the `'Strider'` text to `'Aragorn'`
-	let strider = document.querySelector("#Rivendell ul li:nth-child(4)");
+	let strider = document.querySelector("#buddies li:nth-child(4)");
 	strider.innerHTML = "Aragorn";
 }
 
@@ -190,9 +196,25 @@ function beautifulStranger() {
 
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
-	// create a new div called `'the-fellowship'` within `rivendell`
-	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
+	// // create a new div called `'the-fellowship'` within `rivendell`
+	// let Rivendell = document.getElementById("Rivendell");
+	// let the_fellowship = document.createElement("div");
+	// the_fellowship.setAttribute("id", "the-fellowship");
+
+	// Rivendell.append(the_fellowship); // √
+	
+	// let the_fellowship_ul = document.createElement("ul");
+	// the_fellowship.append(the_fellowship_ul);
+
+	// const The_Hobbits = document.querySelector("#The-Shire ul");
+
+	// // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	// // after each character is added make an alert that they // have joined your party
+	// for (let i = 0; i < hobbits.length; i++) {
+	// 	the_fellowship.appendChild(hobbits[i]);
+	// 	alert(`${hobbits[i].innerHTML} has joined the party!`)
+	// 	console.log(hobbits[i]);
+	// }
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
