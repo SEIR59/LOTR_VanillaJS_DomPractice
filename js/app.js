@@ -48,8 +48,10 @@ function makeMiddleEarth() {
 function makeHobbits() {
   console.log("2: makeHobbits");
   const hobbitsCrew = document.createElement("ul");
+
   const theShire = document.getElementById("The-Shire");
   hobbitsCrew.id = "hobbitsid";
+
   //console.log(hobbitsCrew)
 
   hobbits.forEach((names) => {
@@ -162,9 +164,13 @@ function makeBuddies() {
 
 function leaveTheShire() {
   console.log("6: leaveTheShire");
-  
 
+  let hobbitsCrew = document.getElementById("hobbitsid")
+  console.log(hobbitsCrew);
   // assemble the `hobbits` and move them to `rivendell`
+  const rivendell = document.getElementById("Rivendell");
+  console.log(rivendell);
+  rivendell.appendChild(hobbitsCrew);
 }
 
 // COMMIT YOUR WORK
@@ -176,7 +182,8 @@ function leaveTheShire() {
 
 function beautifulStranger() {
   console.log("7: beautifulStranger");
-
+	let buddiesCrew = document.getElementById('buddiesCrew');
+	
   // change the `'Strider'` text to `'Aragorn'`
 }
 
