@@ -141,10 +141,25 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-	let aside = document.createElement("aside");
+	const aside = document.createElement("aside");
+	console.log(aside);
 	// put an `unordered list` of the `'buddies'` in the aside
+	const teamUL = document.createElement("ul");
+	teamUL.id = "teamUL"; //with ID
+	teamUL.appendChild(aside);
 
 	// insert your aside as a child element of `rivendell`
+	// Have to call rivendell from HTML
+	buddies.forEach( group => {
+		const teamLI = document.createElement("li"); // just like previous functions
+		teamUL.classList.add("buddies");
+		console.log(teamUL);
+		//Append class
+		teamUL.appendChild(teamLI);
+	}); 
+	// Append to Rivendell
+document.getElementById("Rivendell").appendChild(aside);
+
 }
 
 // COMMIT YOUR WORK
