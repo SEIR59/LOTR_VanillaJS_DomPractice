@@ -171,7 +171,11 @@ document.getElementById("Rivendell").appendChild(aside);
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	//call the hobbits and append to rivendell
+	const hobbitList = document.getElementById("");
+	const rivendell = document.getElementById("Rivendell");
+	console.log(rivendell);
+	rivendell.appendChild(hobbitList);
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
