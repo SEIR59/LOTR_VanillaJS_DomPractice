@@ -235,7 +235,7 @@ function theBalrog() {
 	let gandolf = document.querySelector("#the-fellowship li:nth-child(1)");
 	gandolf.setAttribute("class", "white");
 	gandolf.innerText = "Gandalf the White";
-	// apply the following style to the element, make the // background 'white', add a grey border
+	// apply the following style to the element, make the // background 'white', add a grey border √
 }
 
 // COMMIT YOUR WORK
@@ -248,8 +248,11 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+	alert("The horn of Gondor has beem blown!")
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	let deadManWalking = document.querySelector("#the-fellowship li:nth-child(5)");
+	deadManWalking.remove();
 }
 
 // COMMIT YOUR WORK
