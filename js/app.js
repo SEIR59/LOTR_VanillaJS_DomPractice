@@ -1,7 +1,6 @@
 console.log("Linked.");
 const body = document.querySelector("body");
-console.log(body)
-
+console.log(body);
 // Dramatis Personae
 const hobbits = [
   `Frodo Baggins`,
@@ -23,14 +22,14 @@ const lands = ["The-Shire", "Rivendell", "Mordor"];
 function makeMiddleEarth() {
   console.log("1: makeMiddleEarth");
 
-  const middleEarthEL = document.createElement('section');
+  const middleEarthEL = document.createElement("section");
   //console.log(middleEarthEL)o
-  middleEarthEL.setAttribute('id', 'middle-earth');
+  middleEarthEL.setAttribute("id", "middle-earth");
 
-  lands.forEach( land => {
-    const landElement = document.createElement('article');
-    landElement.setAttribute('id', `${land}`);
-    const landTitleTag = document.createElement('h1');
+  lands.forEach((land) => {
+    const landElement = document.createElement("article");
+    landElement.setAttribute("id", `${land}`);
+    const landTitleTag = document.createElement("h1");
     landTitleTag.innerText = `${land}`;
     landElement.append(landTitleTag);
     middleEarthEL.appendChild(landElement);
@@ -49,15 +48,18 @@ function makeMiddleEarth() {
 function makeHobbits() {
   console.log("2: makeHobbits");
   const hobbitsCrew = document.createElement("ul");
+  const theShire = document.getElementById("The-Shire");
+  hobbitsCrew.id = "hobbitsid";
   //console.log(hobbitsCrew)
+
   hobbits.forEach((names) => {
     const hobbitsClass = document.createElement("li");
-    hobbitsCrew.setAttribute("class", `${names}`);
+    hobbitsClass.setAttribute("class", "hobbit");
     hobbitsCrew.appendChild(hobbitsClass);
     hobbitsClass.innerText = `${names}`;
     body.appendChild(hobbitsCrew);
   });
-  const theShire = document.getElementById("The-Shire")
+  
   theShire.appendChild(hobbitsCrew);
 }
 
@@ -80,10 +82,15 @@ function keepItSecretKeepItSafe() {
   console.log("3: keepItSecretKeepItSafe");
 
   // create a div with an id of `'the-ring'`
-const theRing = document.createElement('div');
+  const theRing = document.createElement("div");
+  theRing.id = "the-ring";
   // give the div a class of `'magic-imbued-jewelry'`
-
+  theRing.className = "magic-imbued-jewelry";
+   //hobbitsid = document.querySelector(hobbitsid);
   // add the ring as a child of `Frodo`
+  let frodo = document.getElementsByClassName("hobbit")[0]
+ console.log(frodo)
+  frodo.appendChild(theRing);
 }
 
 // COMMIT YOUR WORK
