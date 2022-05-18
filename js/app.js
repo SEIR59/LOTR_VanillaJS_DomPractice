@@ -132,7 +132,20 @@ mordor.appendChild(baddiesCrew);
 
 function makeBuddies() {
   console.log("5: makeBuddies");
-
+  let rivendell = document.getElementById("Rivendell")
+  const buddiesCrew = document.createElement("ul");
+  buddiesCrew.id = "buddiesid";
+  //console.log(hobbitsCrew)
+  
+  buddies.forEach((name) => {
+	const buddie = document.createElement("aside");
+	buddie.setAttribute("class", "buddie");
+	buddiesCrew.appendChild(buddie);
+	buddie.innerText = `${name}`;
+	body.appendChild(buddiesCrew);
+  });
+  
+  rivendell.appendChild(buddiesCrew);
   // create an `aside` tag
 
   // put an `unordered list` of the `'buddies'` in the aside
@@ -149,6 +162,7 @@ function makeBuddies() {
 
 function leaveTheShire() {
   console.log("6: leaveTheShire");
+  
 
   // assemble the `hobbits` and move them to `rivendell`
 }
