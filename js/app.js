@@ -104,7 +104,20 @@ function makeBaddies() {
   console.log("4: makeBaddies");
 
   // display an unordered list of baddies in Mordor
+let mordor = document.getElementById("Mordor")
+const baddiesCrew = document.createElement("ul");
+baddiesCrew.id = "baddieid";
+//console.log(hobbitsCrew)
 
+baddies.forEach((name) => {
+  const baddie = document.createElement("li");
+  baddie.setAttribute("class", "baddie");
+  baddiesCrew.appendChild(baddie);
+  baddie.innerText = `${name}`;
+  body.appendChild(baddiesCrew);
+});
+
+mordor.appendChild(baddiesCrew);
   // give each of the baddies a class of "baddy"
 
   // remember to append them to Mordor
