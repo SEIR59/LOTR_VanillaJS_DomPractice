@@ -213,12 +213,12 @@ function forgeTheFellowShip() {
 	for (let i = 0; i < The_Buddies.length; i++) {
 		let isJoining = document.querySelector(`#buddies > li`);
 		the_fellowship.appendChild(isJoining);
-		alert(`${isJoining.innerText} has joined your party!`)
+		// alert(`${isJoining.innerText} has joined your party!`)
 	}
 	for (let i = 0; i < The_Hobbits.length; i++) {
 		let isJoining = document.querySelector(`#Hobbits > li`);
 		the_fellowship.appendChild(isJoining);
-		alert(`${isJoining.innerText} has joined your party!`)
+		// alert(`${isJoining.innerText} has joined your party!`)
 	}
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
@@ -233,7 +233,7 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	let gandolf = document.querySelector("#the-fellowship li:nth-child(1)");
-	gandolf.setAttribute("class", "white");
+	gandolf.setAttribute("class", "buddy white");
 	gandolf.innerText = "Gandalf the White";
 	// apply the following style to the element, make the // background 'white', add a grey border √
 }
@@ -265,7 +265,16 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	let Frodo = document.querySelector("#the-fellowship li:nth-child(5)");
+	let Sam = document.querySelector("#the-fellowship li:nth-child(6)");
+	let mordor = document.getElementById("Mordor");
+
+	mordor.appendChild(Frodo);
+	mordor.appendChild(Sam);
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	let MountDoom = document.createElement("div");
+	MountDoom.setAttribute("id", "mount-doom")
+	mordor.append(MountDoom)
 }
 
 // COMMIT YOUR WORK
