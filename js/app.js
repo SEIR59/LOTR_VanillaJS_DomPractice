@@ -207,15 +207,11 @@ function forgeTheFellowShip() {
 	rivendell.appendChild(theFellowship);
 
   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'
-  theFellowship.map ( team => {
-	return team +'hobbits' + 'buddies'  ;
-  })
-	console.log(team)
-  ///let theFellowship = document.getElementById('Rivendale')
-  
-//for (let i = 0; i < theFellowship.length; i++);
-	//theFellowship[i]
-	
+ const buddiesAndHobbits = rivendell.querySelectorAll('li')
+	for(let i = 0; i < buddiesAndHobbits.length; i++){
+    alert(`${buddiesAndHobbits[i].innerText} have joined your party`)
+  }
+  theFellowship.append(buddiesCrew);
 }
 	
   // after each character is added make an alert that they // have joined your party
