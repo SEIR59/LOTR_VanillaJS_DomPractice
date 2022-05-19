@@ -211,6 +211,8 @@ function forgeTheFellowShip() {
 	const thefellowship = document.createElement("div");
 	thefellowship.id = "fellowship";
 	const fellowList = document.createElement("ul");
+	console.log(fellowList)
+	fellowList.id = "fellowList";
 	const rivendell = document.getElementById("Rivendell");
 	rivendell.appendChild(thefellowship);
 	thefellowship.appendChild(fellowList);
@@ -219,6 +221,7 @@ function forgeTheFellowShip() {
 	for (let hobbit of hobbitList) {
 		fellowList.append(hobbit)
 		console.log(`${hobbit.id} has joined the party.`)
+		// alert(`${hobbit.id} has joined the party.`)
 	}
 		
 	const teamUL = Array.from(document.getElementById("teamUL").children);
@@ -257,6 +260,12 @@ function theBalrog() {
 
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
+	alert("The Horn of Gondor has been blown");
+	const boromir = document.getElementById("Boromir");
+	console.log(boromir);
+	const fellowList = document.getElementById("fellowList")
+	fellowList.removeChild(boromir);
+
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
