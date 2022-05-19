@@ -61,7 +61,7 @@ function makeHobbits() {
 
 	// display an `unordered list` of hobbits in the shire
 	const hobbitList = document.createElement("ul");
-	hobbitList.setAttribute = "id", "hobbitsUL";
+	hobbitList.id = "hobbitUL";
 	// give each hobbit a class of `hobbit`
 	hobbits.forEach( residents => {
 		const hobbitClass = document.createElement("li");
@@ -146,20 +146,20 @@ function makeBuddies() {
 	// put an `unordered list` of the `'buddies'` in the aside
 	const teamUL = document.createElement("ul");
 	teamUL.id = "teamUL"; //with ID
-	teamUL.appendChild(aside);
-
+	aside.appendChild(teamUL);
+	teamUL.classList.add("buddies");
+	document.getElementById("Rivendell").appendChild(aside);
 	// insert your aside as a child element of `rivendell`
 	// Have to call rivendell from HTML
-	buddies.forEach( group => {
+	buddies.forEach(bud => {
 		const teamLI = document.createElement("li"); // just like previous functions
-		teamUL.classList.add("buddies");
-		console.log(teamUL);
+		teamLI.id=bud;
+		teamLI.textContent = bud;
+
 		//Append class
 		teamUL.appendChild(teamLI);
 	}); 
 	// Append to Rivendell
-document.getElementById("Rivendell").appendChild(aside);
-
 }
 
 // COMMIT YOUR WORK
@@ -172,7 +172,7 @@ document.getElementById("Rivendell").appendChild(aside);
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 	//call the hobbits and append to rivendell
-	const hobbitList = document.getElementById("");
+	const hobbitList = document.getElementById("hobbitUL");
 	const rivendell = document.getElementById("Rivendell");
 	console.log(rivendell);
 	rivendell.appendChild(hobbitList);
