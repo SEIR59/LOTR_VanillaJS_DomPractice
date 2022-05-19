@@ -285,7 +285,18 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
   console.log("11: itsDangerousToGoAlone");
   // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+  let fro = document.querySelector("#theFellowship li:nth-child(5)");
+  Mordor.appendChild(fro)
+
+  let Sam = document.querySelector("#theFellowship li:nth-child(6)");
+  Mordor.appendChild(Sam)
+
   // add a div with an id of `'mount-doom'` to `Mordor`
+	const md = document.createElement("div");
+	md.setAttribute("id", "mount-doom")
+	Mordor.appendChild(md)
+
+
 }
 
 // COMMIT YOUR WORK
