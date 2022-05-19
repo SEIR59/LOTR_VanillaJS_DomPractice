@@ -188,7 +188,9 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	const strider = document.getElementById("Strider");
+	console.log(strider);
+	strider.textContent = "Aragorn";
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
