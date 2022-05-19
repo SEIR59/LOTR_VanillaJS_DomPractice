@@ -123,6 +123,11 @@ ul {
   width: inherit;
 }
 
+.gan {
+  background-color: white;
+  border: 3px solid grey;
+}
+
 
 
 
