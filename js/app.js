@@ -68,6 +68,7 @@ function makeHobbits() {
 		console.log(residents);
 		hobbitList.appendChild(hobbitClass)
 		hobbitClass.innerHTML = `${residents}`
+		hobbitClass.id = (residents);
 	});
 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
@@ -191,6 +192,7 @@ function beautifulStranger() {
 	const strider = document.getElementById("Strider");
 	console.log(strider);
 	strider.textContent = "Aragorn";
+	strider.id = "Aragorn";
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
@@ -206,7 +208,24 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
-
+	const thefellowship = document.createElement("div");
+	thefellowship.id = "fellowship";
+	const fellowList = document.createElement("ul");
+	const rivendell = document.getElementById("Rivendell");
+	rivendell.appendChild(thefellowship);
+	thefellowship.appendChild(fellowList);
+	const hobbitList = Array.from(document.getElementById("hobbitUL").children);
+	console.log(hobbitList, fellowList) 
+	for (let hobbit of hobbitList) {
+		fellowList.append(hobbit)
+		console.log(`${hobbit.id} has joined the party.`)
+	}
+		
+	const teamUL = Array.from(document.getElementById("teamUL").children);
+	for (let buddy of teamUL) {
+		fellowList.append(buddy)
+		console.log(`${buddy.id} has joined the party.`)
+	}
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
