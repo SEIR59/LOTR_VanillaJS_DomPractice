@@ -254,7 +254,7 @@ function hornOfGondor() {
   alert((`THE HORN OF GONDOR HAS BEEN BLOWN!`))
 
   const theFellowship = document.getElementById("fellowship")
-	theFellowship.removeChild(document.getElementsByClassName("buddie")[4])
+  theFellowship.removeChild(document.getElementsByClassName("buddie")[4])
   alert(`Boromir's been killed by the Uruk-hai. RIP BORIMIR`)
   // Boromir's been killed by the Uruk-hai!
   // Remove `Boromir` from the Fellowship
@@ -274,10 +274,10 @@ function itsDangerousToGoAlone() {
 	sam = document.getElementsByClassName("hobbit")[1]
 	// console.log(frodo)
 	// console.log(sam)
-	const mordor = document.getElementById("Mordor")
-	const mordorList = document.getElementById("Mordor").querySelector('ul')
-	mordorList.appendChild(frodo)
-	mordorList.appendChild(sam)
+const mordor = document.getElementById("Mordor")
+const mordorList = document.getElementById("Mordor").querySelector('ul')
+mordorList.appendChild(frodo)
+mordorList.apppenChild(sam)
 	// add a div with an id of `'mount-doom'` to `Mordor`
 	mntDoom = document.createElement("div")
 	mntDoom.setAttribute("id", "mount-doom")
