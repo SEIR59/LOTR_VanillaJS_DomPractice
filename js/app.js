@@ -170,11 +170,11 @@ function leaveTheShire() {
   console.log(shire);
 
   //  moving hobbits
-  const riven = document.getElementById("Rivendell");
-  console.log(riven);
+  const rivenDE = document.getElementById("Rivendell");
+  console.log(rivenDE);
 
-  riven.appendChild(shire);
-  console.log(riven);
+  rivenDE.appendChild(shire);
+  console.log(rivenDE);
 }
 
 // COMMIT YOUR WORK
@@ -341,7 +341,37 @@ function weWantsIt() {
 function thereAndBackAgain() {
   console.log("13: thereAndBackAgain");
   // remove `Gollum` and `the Ring` from the document
+  let killGol = document.getElementById("gollum")
+  killGol.remove();
+
+  
+
+
+
   // Move all the `hobbits` back to `the shire`
+	let newShire = document.getElementById("The-Shire")
+	console.log(newShire)
+
+	let hob1 = document.getElementsByTagName('li').item(4)
+	console.log(hob1)
+
+	let hob2 = document.getElementsByTagName('li').item(9)
+	console.log(hob2)
+
+	let hob3 = document.getElementsByTagName('li').item(10)
+	console.log(hob3)
+
+	let hob4 = document.getElementsByTagName('li').item(11)
+	console.log(hob4)
+
+	newShire.appendChild(hob1)
+	newShire.appendChild(hob2)
+	newShire.appendChild(hob3)
+	newShire.appendChild(hob4)
+
+
+		
+
 }
 
 // COMMIT YOUR WORK
