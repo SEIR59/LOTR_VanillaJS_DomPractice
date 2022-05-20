@@ -226,7 +226,7 @@ function forgeTheFellowShip() {
 	const teamUL = Array.from(document.getElementById("teamUL").children);
 	for (let buddy of teamUL) {
 		fellowList.append(buddy)
-		console.log(`${buddy.id} has joined the party.`)
+		alert(`${buddy.id} has joined the party.`)
 	}
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
@@ -330,6 +330,22 @@ function weWantsIt() {
 
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
+
+	let gollum = document.getElementById("gollum");
+	let mtDoom = document.getElementById("mtDoom");
+	mtDoom.removeChild(gollum);
+
+	let frodo = document.getElementById("Frodo Baggins");
+	let samwise = document.getElementById('Samwise "Sam" Gamgee');
+	let merry = document.getElementById('Meriadoc "Merry" Brandybuck');
+	let pippin = document.getElementById('Peregrin "Pippin" Took');
+	// let fellowList
+	document.getElementById("The-Shire").appendChild(frodo);
+	document.getElementById("The-Shire").appendChild(samwise);
+	document.getElementById("The-Shire").append(merry);
+	document.getElementById("The-Shire").append(pippin);
+
+
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
 }
