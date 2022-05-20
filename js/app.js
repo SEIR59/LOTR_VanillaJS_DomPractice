@@ -278,16 +278,16 @@ function hornOfGondor() {
 // ============
 
 function itsDangerousToGoAlone() {
-	console.log('11: itsDangerousToGoAlone')
+	console.log('11: itsDangerousToGoAlone');
 
-	let frodo = document.getElementById("Frodo Baggins")
-	let samwise = document.getElementById('Samwise "Sam" Gamgee')
-	let mordor = document.getElementById("Mordor")
-	mordor.appendChild(frodo)
-	mordor.appendChild(samwise)
+	let frodo = document.getElementById("Frodo Baggins");
+	let samwise = document.getElementById('Samwise "Sam" Gamgee');
+	let mordor = document.getElementById("Mordor");
+	mordor.appendChild(frodo);
+	mordor.appendChild(samwise);
 
 	const mtDoom = document.createElement("div");
-	mtDoom.id = "mtDoom"
+	mtDoom.id = "mtDoom";
 	document.getElementById("Mordor").appendChild(mtDoom);
 
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
@@ -303,6 +303,19 @@ function itsDangerousToGoAlone() {
 
 function weWantsIt() {
 	console.log('12: weWantsIt')
+
+	let gollum = document.createElement("div");
+	gollum.id = "gollum";
+	console.log(gollum);
+	let mordor = document.getElementById("Mordor");
+	mordor.appendChild(gollum);
+
+	let frodo = document.getElementById("Frodo Baggins")
+	let ringDiv = document.getElementById("the-ring")
+	gollum.appendChild(ringDiv)
+
+	let mtDoom = document.getElementById("mtDoom");
+	mtDoom.appendChild(gollum);
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
