@@ -159,8 +159,7 @@ function makeBuddies() {
 
 		//Append class
 		teamUL.appendChild(teamLI);
-	}); 
-	// Append to Rivendell
+	});
 }
 
 // COMMIT YOUR WORK
@@ -280,6 +279,17 @@ function hornOfGondor() {
 
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
+
+	let frodo = document.getElementById("Frodo Baggins")
+	let samwise = document.getElementById('Samwise "Sam" Gamgee')
+	let mordor = document.getElementById("Mordor")
+	mordor.appendChild(frodo)
+	mordor.appendChild(samwise)
+
+	const mtDoom = document.createElement("div");
+	mtDoom.id = "mtDoom"
+	document.getElementById("Mordor").appendChild(mtDoom);
+
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
 }
